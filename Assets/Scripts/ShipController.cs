@@ -21,6 +21,7 @@
  */
 
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -67,6 +68,8 @@ public class ShipController : MonoBehaviour {
 	void Update () {
 		if (Input.GetKeyDown("space")) {
       Shoot();
+		} else if(Input.GetKeyDown("escape")){
+			SceneManager.LoadScene("Menu");
 		}
 		float xDir = Input.GetAxis("Horizontal");
 		float yDir = Input.GetAxis("Vertical");

@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -92,5 +93,10 @@ public class PanelManager : MonoBehaviour {
 	private void SetSelected(GameObject go)
 	{
 		EventSystem.current.SetSelectedGameObject(go);
+	}
+
+	public void StartGame()
+	{
+		SceneManager.LoadScene("GameScene");
 	}
 }
