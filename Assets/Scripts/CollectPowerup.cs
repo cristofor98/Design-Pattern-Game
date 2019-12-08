@@ -32,6 +32,7 @@ public class CollectPowerup : MonoBehaviour {
 
 	void Start () {
 		powerupAudio = gameObject.GetComponent<AudioSource>();
+		powerupAudio.volume = GlobalVariables.SfxVolume;
 		powerupCollider = gameObject.GetComponent<CircleCollider2D>();
 		powerupRenderer = gameObject.GetComponent<Renderer>();
 	}

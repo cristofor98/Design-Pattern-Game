@@ -49,11 +49,15 @@ public class GameController: MonoBehaviour {
   public GameObject topBoundary;                    // is not able to leave the screen.
   public GameObject bottomBoundary;                 //
 
+	public AudioSource audio;
 	void Awake () {
 		SharedInstance = this;
 	}
 
 	void Start () {
+		audio = gameObject.GetComponent<AudioSource>();
+		audio.volume = GlobalVariables.MusicVolume;
+		audio.Play();
 		StartCoroutine(SpawnEnemyWaves());
 	}
 

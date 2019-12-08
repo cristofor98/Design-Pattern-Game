@@ -62,6 +62,7 @@ public class ShipController : MonoBehaviour {
 		activePlayerTurrets = new List<GameObject>();
 		activePlayerTurrets.Add(startWeapon);
 		shootSoundFX = gameObject.GetComponent<AudioSource>();
+		shootSoundFX.volume = GlobalVariables.SfxVolume;
 		playerRigidbody = GetComponent<Rigidbody2D>();
 	}
 	

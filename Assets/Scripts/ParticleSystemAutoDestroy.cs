@@ -26,8 +26,12 @@ using System.Collections;
 public class ParticleSystemAutoDestroy : MonoBehaviour {
 	private ParticleSystem ps;
 
+	public AudioSource audio;
+
 	public void Start() {
 		ps = GetComponent<ParticleSystem>();
+		audio = gameObject.GetComponent<AudioSource>();
+		audio.volume = GlobalVariables.SfxVolume;
 	}
 
 	public void Update() {
